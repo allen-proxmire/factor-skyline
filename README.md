@@ -68,7 +68,7 @@ If you reference or discuss this work, please cite:
 
 **Allen Proxmire, _The Factor Skyline: An Ontological Lookout Over the Integers_ (2026).**
 
-A DOI will be added once the Zenodo release is published.
+[![DOI](https://zenodo.org/badge/1135940602.svg)](https://doi.org/10.5281/zenodo.18275273)
 
 ---
 
