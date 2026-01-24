@@ -1,4 +1,4 @@
-# The Factor Skyline: An Ontological Lookout Over the Integers
+# The Factor Skyline: a 2-Dimensional View of the Number Line
 
 A structural and geometric reinterpretation of the integers that reveals the hidden architecture behind divisibility, factorization, and prime behavior.  
 This repository hosts the manuscript, supporting notes, and related materials for the Factor Skyline framework.
