@@ -40,5 +40,5 @@ def generate_factor_stairs(N, filename="factor_stairs.csv"):
 
 # Example usage:
 coords = generate_factor_stairs(1000)
-for row in coords[:10]:
+for row in coords[:100]:
     print(row)
