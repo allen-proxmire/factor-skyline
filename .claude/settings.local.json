@@ -28,7 +28,16 @@
       "Bash(rm FS_coordinates.py FS_prime-coordinates.py generate_map.py)",
       "Bash(rm FS_ontology.md FS_PNT_derivation.md FS_sieve_geometry.md FS_prime_gaps.md FS_residue_classes.md FS_primorial_epochs.md FS_short_intervals.md FS_Chebyshev.md FS_RH_analogue.md FS_explicit_formula.md FS_twin_primes.md FS_Goldbach.md FS_Cramer.md FS_constellations.md FS_Mobius.md FS_smooth_numbers.md FS_zero_geometry.md FS_divisors.md)",
       "Bash(rm FS_01_research_program.md FS_02_paper_draft.md FS_03_correlations.md FS_04_randomness.md FS_05_entropy.md FS_06_ergodicity.md FS_07_universality.md FS_08_meta_structure.md FS_09_meta_mathematics.md)",
-      "Bash(rm \"The Factor Skyline_manuscript.md\" \"The Factor Skyline_2D View.pdf\")"
+      "Bash(rm \"The Factor Skyline_manuscript.md\" \"The Factor Skyline_2D View.pdf\")",
+      "Bash(python run_all.py)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(make list:*)",
+      "Bash(\"C:/Users/allen/GitHub/Factor Skyline/Makefile\":*)",
+      "Bash(pip list:*)",
+      "Bash(where pandoc:*)",
+      "Bash(python -c \"import reportlab; print\\(reportlab.Version\\)\")",
+      "Bash(python _build_pdf.py)",
+      "Bash(python _build_glossary_pdf.py)"
     ]
   }
 }

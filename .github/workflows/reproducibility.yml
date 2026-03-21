@@ -1,0 +1,42 @@
+name: Factor Skyline Reproducibility
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  run-harness:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install numpy
+
+      - name: Run reproducibility harness
+        run: python reproducibility/run_all.py
+
+      - name: Detect output directory
+        if: always()
+        run: |
+          OUTPUT_DIR=$(ls -1dt reproducibility/tables/output/*/ | head -1)
+          echo "OUTPUT_DIR=${OUTPUT_DIR}" >> "$GITHUB_ENV"
+          echo "Detected output directory: ${OUTPUT_DIR}"
+
+      - name: Upload output artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: factor-skyline-output
+          path: ${{ env.OUTPUT_DIR }}

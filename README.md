@@ -1,82 +1,117 @@
-# The Factor Skyline: A Unified Architecture for Multiplicative Number Theory
+# Factor Skyline
 
 [![DOI](https://zenodo.org/badge/1135940602.svg)](https://doi.org/10.5281/zenodo.18275273)
 
----
-
-## Overview
-
-The **Factor Skyline** is a geometric ontology of the integers in which each integer *n* becomes a column of width lpf(*n*) (least prime factor) and height *n*/lpf(*n*), placed cumulatively along a horizontal axis. The resulting two-dimensional landscape is governed by five emergent concepts — width, height, activation, coverage, and escape — all deriving from a single primitive function. This repository contains a four-part monograph developing the FS framework as a unified architectural, statistical, dynamical, and meta-mathematical theory: Part I establishes the coverage architecture and derives the prime number theorem, Dickman smoothness, and Chebyshev conservation from geometric first principles; Part II develops the correlation and randomness theories, proving that all arithmetic correlations arise from CRT independence of width layers; Part III establishes the entropy, ergodic, and universality theories, identifying the escape density D(*p*) as a renormalization coupling constant; and Part IV examines the framework's own meta-structure, proving that lpf is the sole primitive and that the parity barrier — a 0.26-bit-per-integer information gap — is the precise structural limit separating the framework's 66 proved theorems from the major open conjectures.
+The **Factor Skyline** is a geometric architecture for the integers in which each integer *n* is represented as a column of width lpf(*n*) (least prime factor) and height *n*/lpf(*n*), placed cumulatively along a horizontal axis. The resulting two-dimensional landscape — the skyline — is governed by five emergent concepts (width, height, activation, coverage, and escape), all deriving from the single primitive function lpf. This repository contains a four-part monograph developing the FS framework as a unified architectural, statistical, dynamical, and meta-mathematical theory of multiplicative number theory, together with a deterministic reproducibility harness that regenerates every numerical result cited in the monograph. The goal is a fully reproducible mathematical platform: every theorem, every table, and every verification can be independently checked from source.
 
 ---
 
 ## Repository Structure
 
-- **`FS_monograph.md`** — The unified four-part monograph assembling the complete FS framework: 66 theorems, 12 definitions, 14 chapters, 20 verification tables, and a comprehensive back matter.
-
-- **`FSPapers_01_architectural_foundation.md`** — Part I as a standalone paper: the five primitives, templates, coverage protection, template persistence, FS-x footprint invariance, geometric PNT, Dickman smoothness, Mobius structure, divisor geometry, and the conservation law. (22 theorems.)
-
-- **`FSPapers_02.1_correlations_and_randomness.md`** — Part II as a standalone paper: the shared-layer / independent-layer decomposition, Hardy-Littlewood pair correlations, Chowla mechanism, divisor correlations, omega non-mixing, GUE level repulsion, sub-Poisson escape, the 73/27 template-stochastic split, entropy budget, and the unified randomness principle. (14 theorems.)
-
-- **`FSPapers_03_information_dynamics_universality.md`** — Part III as a standalone paper: entropy theory (the 68.5/31.5 split), ergodic theory (quasi-ergodicity, mixing dichotomy), universality theory (three classes, 12 universal structures, GUE from incommensurability), the renormalization flow, and the triple correspondence. (17 theorems.)
-
-- **`FSPapers_04_meta_structure.md`** — Part IV as a standalone paper: lpf as sole primitive, three minimal meta-axioms, emergence hierarchy, three dualities, renormalization group, Kolmogorov complexity, pseudo-randomness, the parity barrier as a methodological (not Godelian) limit, T_FS as a first-order theory, and the computational-mathematical mirror. (13 theorems.)
-
-- **`FS_architectural_map.png`** — A high-resolution hierarchical diagram showing the four-part structure, all 14 chapters, cross-part theorem dependencies, and the global flow from lpf through D(*p*) to the parity barrier.
-
-- **`FS_glossary.md`** — A 30-entry glossary organized into four conceptual clusters (Architectural, Statistical, Dynamical/Universal, Meta-Structural), with definitions, provenance, and cross-references.
-
-- **`FS_coordinates.py`** — Python implementation of the FS-coordinate system. Computes (*n*, *x*_FS, *y*_FS) for integers 1 through *N* using SymPy.
-
-- **`FS_prime-coordinates.py`** — Variant that outputs FS-coordinates for primes only.
-
-- **`The Factor Skyline_manuscript.md`** — The founding manuscript describing the FS construction and its conceptual motivation.
+| Directory | Purpose |
+|-----------|---------|
+| **`monograph/`** | The unified four-part monograph (`FS_monograph.md`), the glossary (`FS_glossary.md`), the founding manuscript, and the original conceptual PDF. This is the primary scholarly output of the project. |
+| **`papers/`** | The four standalone papers, each self-contained with its own abstract, theorems, proofs, and references. These correspond to Parts I through IV of the monograph but can be read independently. |
+| **`modules/`** | The 18 individual derivation modules (ontology, PNT, sieve geometry, prime gaps, residue classes, primorial epochs, short intervals, Chebyshev, RH analogue, explicit formula, twin primes, Goldbach, Cramer, constellations, Mobius, smooth numbers, zero geometry, divisors). These are the working derivation layer between the monograph and the code. |
+| **`maps/`** | The architectural map of the monograph in both Markdown and high-resolution PNG formats. Shows the four-part structure, all 14 chapters, and cross-part theorem dependencies. |
+| **`reproducibility/`** | The full reproducibility harness: entry-point script, 20 verification table scripts, shared utilities, and timestamped output directories. See [reproducibility/README.md](reproducibility/README.md) for detailed documentation. |
+| **`archive/`** | Earlier intermediate drafts (FS_01 through FS_09) that were later integrated into the monograph papers. Preserved for provenance; not part of the current scholarly output. |
+| **`data/`** | Reserved for raw datasets and computed inputs. Currently empty. |
+| **`.github/workflows/`** | GitHub Actions CI configuration for automated reproducibility checks on every push and pull request. |
 
 ---
 
-## Getting Started
+## The Factor Skyline Architecture
 
-**For a first reading,** start with the [Architectural Map](FS_architectural_map.png) to see how the 14 chapters and 4 parts interrelate, then read the monograph (`FS_monograph.md`) in order: Part I (architecture) → Part II (statistics) → Part III (foundations) → Part IV (meta-theory). Each part builds on the previous; cross-references are explicit.
+The Factor Skyline begins with a single observation: every integer *n* > 1 has a least prime factor, and that least prime factor determines a natural column width. Placing these columns side by side along a horizontal axis produces a two-dimensional landscape in which:
 
-**For quick reference,** consult the [Glossary](FS_glossary.md) for precise definitions of all core terms.
+- **Templates** emerge from the combined coverage of small primes. The primes up to *p* create a repeating pattern of width assignments with period *p*# (the primorial), which determines the majority of the skyline's structure deterministically.
+- **Activations** occur at prime squares. When a new prime *p* reaches its square *p*^2, a new width-*p* layer enters the geometry, permanently claiming a fraction 1/*p* of the remaining uncovered positions.
+- **Escapes** are the integers that slip through all active coverage layers — the primes. They appear as narrow spires of width 1 in the skyline.
+- **Escape density** D(*p*) = product of (1 - 1/*q*) for primes *q* up to *p* governs the long-term frequency of primes. Its asymptotic decay (via Mertens' theorem) produces the prime number theorem as a geometric consequence.
 
-**For a focused reading,** each `FSPapers_0X` file is a self-contained paper readable independently, with its own abstract, theorems, proofs, tables, and references.
-
-**For computational exploration,** run `FS_coordinates.py` to generate FS-coordinate tables and verify the numerical results in the monograph.
-
----
-
-## Reproducibility
-
-All numerical tables in the monograph (Tables A.1 through A.20) are generated from the FS-coordinate system implemented in `FS_coordinates.py`. The verification data includes:
-
-- **FS-coordinate tables** for *n* = 1 to 30 (and beyond)
-- **Escape density convergence** (D(*p*) vs Mertens asymptotic)
-- **PNT verification** (pi(*N*) vs *N* D(sqrt *N*) for *N* up to 10^5)
-- **Conservation law** (theta(*x*)/*x* convergence)
-- **Pair correlations, Mobius correlations, divisor correlations, omega correlations**
-- **Sub-Poisson variance, FS-x autocorrelation, entropy decomposition**
-- **Zero spacing statistics and explicit formula reconstruction**
-
-To reproduce any table, install SymPy (`pip install sympy`) and run the corresponding computation. All scripts use only standard Python and SymPy — no proprietary dependencies.
+This architecture unifies the four papers: Part I builds the geometric foundations, Part II derives correlation and randomness structure from CRT independence of width layers, Part III establishes entropy, ergodic, and universality theories with D(*p*) as a renormalization coupling constant, and Part IV examines the framework's own meta-structure, identifying the parity barrier as the precise limit of the architecture's deductive reach.
 
 ---
 
-## Core Concepts
+## The Four Papers
 
-- **lpf as sole primitive.** The entire FS framework — all 66 theorems across four parts — derives from a single function: lpf(*n*), the least prime factor. (Part IV, Theorem IV.1.)
+The monograph comprises four parts, each available as a standalone paper:
 
-- **Template architecture.** The combined coverage of primes 2, 3, ..., *p* creates a repeating pattern with period *p*# that determines 73.3% of the skyline's structure deterministically. (Part I, Ch. 2; Part II, Theorem II.10.)
+**Part I — Architectural Foundation.**
+Establishes the five primitives (width, height, activation, coverage, escape), derives the primorial template, coverage protection, template persistence, FS-x footprint invariance, the geometric prime number theorem, Dickman smoothness, Mobius structure, divisor geometry, and the Chebyshev conservation law. 22 theorems.
+[papers/FSPapers_01_architectural_foundation.md](papers/FSPapers_01_architectural_foundation.md)
 
-- **Shared/independent layer decomposition.** Every arithmetic correlation decomposes into contributions from shared layers (primes dividing the offset, creating correlation) and independent layers (primes not dividing the offset, creating decorrelation by CRT). (Part II, Theorem II.1.)
+**Part II — Correlations and Randomness.**
+Develops the shared-layer / independent-layer decomposition, Hardy-Littlewood pair correlations, the Chowla mechanism, divisor correlations, omega non-mixing, GUE level repulsion, sub-Poisson escape statistics, the 73/27 template-stochastic split, the entropy budget, and the unified randomness principle. 14 theorems.
+[papers/FSPapers_02.1_correlations_and_randomness.md](papers/FSPapers_02.1_correlations_and_randomness.md)
 
-- **Entropy budget: 68.5% / 31.5%.** The primorial template provides 1.70 of the total 2.48 bits per integer in the FS-x increment sequence. The remaining 0.78 bits are genuine uncertainty, of which 0.26 bits are the irreducible escape entropy. (Part II, Theorem II.13.)
+**Part III — Information, Dynamics, and Universality.**
+Establishes the entropy theory (the 68.5/31.5 split), ergodic theory (quasi-ergodicity, mixing dichotomy), universality theory (three classes, 12 universal structures, GUE from incommensurability), the renormalization flow, and the triple correspondence between entropy, ergodicity, and universality. 17 theorems.
+[papers/FSPapers_03_information_dynamics_universality.md](papers/FSPapers_03_information_dynamics_universality.md)
 
-- **Renormalization flow D(*p*).** Template extension *p*_k# to *p*_{k+1}# defines a multiplicative renormalization with D(*p*) as the running coupling constant, flowing irreversibly from D = 1/2 toward the fixed point D = 0. (Part III, Theorem III.16.)
+**Part IV — Meta-Structure.**
+Proves that lpf is the sole primitive, identifies three minimal meta-axioms, derives the emergence hierarchy, three dualities, the renormalization group structure, Kolmogorov complexity bounds, pseudo-randomness characterization, the parity barrier as a methodological (not Godelian) limit, T_FS as a first-order theory with multiple models, and the computational-mathematical mirror. 13 theorems.
+[papers/FSPapers_04_meta_structure.md](papers/FSPapers_04_meta_structure.md)
 
-- **Parity barrier: 0.26 bits/int.** The precise structural limit separating the framework's proved results from the open conjectures. It is methodological (not Godelian), information-theoretic (0.26 bits/int), computational (escape layer as hard as primality), logical (Sigma-1-0 vs Pi-2-0), and universal (applies to all systems satisfying the FS axioms). (Part III, Theorem III.5; Part IV, Theorem IV.13.)
+---
 
-- **Universality classes.** Three classes of multiplicative systems — logarithmic thinning (the integers), constant density (polynomial rings over finite fields), and degenerate — determined by the asymptotic behavior of the escape density. (Part III, Theorem III.11.)
+## Reproducibility Harness
+
+The reproducibility harness ensures that every numerical claim in the monograph can be independently regenerated. It uses deterministic seeding (Python `random` and NumPy, seed 123456) so that all pseudo-random computations produce identical output across runs, machines, and platforms. Each invocation creates a timestamped output directory under `reproducibility/tables/output/YYYYMMDD_HHMMSS/`, ensuring that no run overwrites another and that longitudinal comparisons are straightforward. The harness executes 20 verification table scripts covering template widths, escape density, activation distribution, entropy budget, correlations, randomness tests, survival factors, prime gaps, sieve geometry, and more. Each table returns a stable JSON schema, and a `summary.json` report records the status of every table. The Makefile provides convenient targets for running, listing, comparing, and cleaning runs. GitHub Actions CI runs the full harness on every push and pull request, uploading timestamped results as build artifacts and failing the build if any table produces an error.
+
+For full documentation, see [reproducibility/README.md](reproducibility/README.md).
+
+---
+
+## How to Run the Harness
+
+From the repository root:
+
+```
+python reproducibility/run_all.py
+```
+
+This will:
+
+- Seed both `random` and `numpy` with the fixed value 123456.
+- Execute all 20 table scripts in sequence.
+- Write individual JSON results (`table_01.json` through `table_20.json`) and a `summary.json` to a new timestamped directory under `reproducibility/tables/output/`.
+- Print `[OK]` or `[ERR]` for each table to the console.
+- Exit with code 0 if all tables succeed, or code 1 if any table fails.
+
+Dependencies: Python 3.11+ and NumPy. Install with `pip install numpy`.
+
+---
+
+## Building the PDFs
+
+The Makefile provides targets for exporting all Markdown documents to PDF using Pandoc with XeLaTeX:
+
+```
+make pdfs          # Export monograph, glossary, map, and all papers
+make monograph     # Export monograph/FS_monograph.pdf
+make glossary      # Export monograph/FS_glossary.pdf
+make map           # Export maps/FS_architectural_map.pdf
+make papers        # Export all papers/*.pdf
+make pdf-clean     # Remove all generated PDFs
+```
+
+Requirements: [Pandoc](https://pandoc.org/) and a XeLaTeX distribution (e.g., TeX Live or MiKTeX).
+
+---
+
+## Continuous Integration
+
+GitHub Actions runs the full reproducibility harness on every push and pull request. The workflow:
+
+- Checks out the repository and sets up Python 3.11.
+- Installs NumPy as the sole dependency.
+- Executes `python reproducibility/run_all.py`.
+- Uploads the timestamped output directory as a build artifact (`factor-skyline-output`).
+- Fails the build if any table script exits with an error.
+
+This ensures that every commit and every pull request is automatically verified against all 20 tables before merging.
 
 ---
 
@@ -89,6 +124,7 @@ If you reference or discuss this work, please cite:
   author       = {Allen Proxmire},
   title        = {The Factor Skyline: An Ontological Lookout Over the Integers},
   year         = {2026},
+  version      = {v1.0},
   doi          = {10.5281/zenodo.18275273},
   url          = {https://doi.org/10.5281/zenodo.18275273},
   note         = {Monograph and supporting materials available at
@@ -98,8 +134,12 @@ If you reference or discuss this work, please cite:
 
 ---
 
-## Contact and Contributing
+## License
+
+This project is released under the terms specified in the repository's license file. See [LICENSE](LICENSE) for details.
+
+---
+
+## Contact
 
 Questions, feedback, and collaboration inquiries are welcome. Please open an issue on this repository or reach out via [GitHub Discussions](../../discussions).
-
-This is an evolving research program. Contributions — whether numerical experiments, alternative proofs, extensions to new multiplicative systems, or independent verification of the monograph's results — are encouraged.

@@ -1,0 +1,130 @@
+{
+  "timestamp": "20260321_130922",
+  "seed": 123456,
+  "output_dir": "C:\\Users\\allen\\GitHub\\Factor Skyline\\reproducibility\\tables\\output\\20260321_130922",
+  "total": 20,
+  "ok": 20,
+  "errors": 0,
+  "tables": [
+    {
+      "module": "tables.table_01_template_widths",
+      "short_name": "table_01_template_widths",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_02_escape_density",
+      "short_name": "table_02_escape_density",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_03_activation_distribution",
+      "short_name": "table_03_activation_distribution",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_04_centerage_statistics",
+      "short_name": "table_04_centerage_statistics",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_05_interage_statistics",
+      "short_name": "table_05_interage_statistics",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_06_entropy_budget",
+      "short_name": "table_06_entropy_budget",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_07_shared_independent_layers",
+      "short_name": "table_07_shared_independent_layers",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_08_correlation_decay",
+      "short_name": "table_08_correlation_decay",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_09_randomness_tests",
+      "short_name": "table_09_randomness_tests",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_10_survival_factor",
+      "short_name": "table_10_survival_factor",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_11_primorial_epochs",
+      "short_name": "table_11_primorial_epochs",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_12_residue_class_balance",
+      "short_name": "table_12_residue_class_balance",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_13_short_intervals",
+      "short_name": "table_13_short_intervals",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_14_prime_gaps",
+      "short_name": "table_14_prime_gaps",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_15_sieve_geometry",
+      "short_name": "table_15_sieve_geometry",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_16_explicit_formula",
+      "short_name": "table_16_explicit_formula",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_17_zero_geometry",
+      "short_name": "table_17_zero_geometry",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_18_cramer_model",
+      "short_name": "table_18_cramer_model",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_19_twin_primes",
+      "short_name": "table_19_twin_primes",
+      "status": "ok",
+      "error": null
+    },
+    {
+      "module": "tables.table_20_goldbach_statistics",
+      "short_name": "table_20_goldbach_statistics",
+      "status": "ok",
+      "error": null
+    }
+  ]
+}
