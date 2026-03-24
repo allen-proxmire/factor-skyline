@@ -20,7 +20,7 @@ The Factor Skyline is a geometric architecture for the integers in which each in
 | **`archive/`** | Earlier intermediate drafts (FS_01 through FS_09) that were later integrated into the monograph papers. Preserved for provenance; not part of the current scholarly output. |
 | **`data/`** | Reserved for raw datasets and computed inputs. Currently empty. |
 | **`.github/workflows/`** | GitHub Actions CI configuration for automated reproducibility checks on every push and pull request. |
-| **`egs/`** | Erdős–Guy–Selfridge Reinterpretation, papers/Factorial-Decomposition-as-Skyline.md, File-by-file analysis: egs/file-analyses.md
+| **`egs/`** | Erdős–Guy–Selfridge Reinterpretation, papers/Factorial-Decomposition-as-Skyline.md, File-by-file analysis: egs/file-analyses.md (Python sources from the teorth/erdos-guy-selfridge project)
 
 ---
 
