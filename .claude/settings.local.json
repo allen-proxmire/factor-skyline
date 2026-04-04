@@ -87,7 +87,11 @@
       "Bash(xargs grep:*)",
       "Bash(grep -r \"^## ED\\\\|^# ED\\\\|ED Skyline\\\\|ED evaluation\\\\|Erdős Discrepancy\" 'C:\\\\Users\\\\allen\\\\GitHub\\\\Factor Skyline' --include=*.md --include=*.py)",
       "Bash(xargs wc:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "WebFetch(domain:arxiv.org)",
+      "WebSearch",
+      "WebFetch(domain:mathstodon.xyz)",
+      "WebFetch(domain:teorth.github.io)"
     ]
   }
 }
