@@ -83,7 +83,11 @@
       "Bash(curl -s \"https://raw.githubusercontent.com/teorth/erdos-guy-selfridge/main/src/python/Original%20paper%20figures/erdos_391_plot4.py\")",
       "Bash(curl -s \"https://raw.githubusercontent.com/teorth/erdos-guy-selfridge/main/src/rearrange/rearrange_2_gs.py\")",
       "Bash(curl -s \"https://raw.githubusercontent.com/teorth/erdos-guy-selfridge/main/src/rearrange/rearrange_lp.py\")",
-      "Bash(curl -s \"https://raw.githubusercontent.com/teorth/erdos-guy-selfridge/main/src/rearrange/rearrange_lp_sol.py\")"
+      "Bash(curl -s \"https://raw.githubusercontent.com/teorth/erdos-guy-selfridge/main/src/rearrange/rearrange_lp_sol.py\")",
+      "Bash(xargs grep:*)",
+      "Bash(grep -r \"^## ED\\\\|^# ED\\\\|ED Skyline\\\\|ED evaluation\\\\|Erdős Discrepancy\" 'C:\\\\Users\\\\allen\\\\GitHub\\\\Factor Skyline' --include=*.md --include=*.py)",
+      "Bash(xargs wc:*)",
+      "Bash(python:*)"
     ]
   }
 }
