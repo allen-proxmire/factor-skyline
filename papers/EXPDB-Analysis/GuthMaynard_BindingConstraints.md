@@ -80,12 +80,8 @@ $$
 
 The supremum $\|A\|_\infty = 30/13$ is attained at this crossover. The function $A(\sigma)$ has a non-smooth peak — a cusp formed by two rational curves meeting tangentially from opposite sides. Before Guth–Maynard, the analogous cusp was at $\sigma \approx 5/7 \approx 0.714$, where Ingham met Huxley at $\|A\|_\infty = 12/5$. Guth–Maynard shifted the cusp leftward (from $5/7$ to $7/10$) and downward (from $12/5$ to $30/13$).
 
-<<<<<<< HEAD
 ![Zero-density envelope A(sigma) after Guth-Maynard, showing the piecewise binding constraints colored by source. The cusp at sigma = 7/10 where Ingham and GM meet is marked.](A_sigma_envelope.png)
 *Figure 1. The zero-density envelope $A(\sigma)$ computed from 482 EXPDB hypotheses. Each colored segment indicates the binding constraint on that interval. Dashed curves show the Ingham and GM bounds extended beyond their binding ranges. The cusp at $\sigma^* = 7/10$ with $A = 30/13$ is marked.*
-
-=======
->>>>>>> 86fceaec5afc6111f7e8b77b3090ceaab78b1b61
 ## 4. Binding and Slack Constraints
 
 ### Binding at $\sigma^*$
@@ -214,7 +210,6 @@ This would not affect $\theta_{\mathrm{PNTALL}}$ but would improve $\theta_{\mat
 
 The first two paths address the same cusp from opposite sides. Any improvement to either limb, however small, strictly decreases $\theta_{\mathrm{PNTALL}}$.
 
-<<<<<<< HEAD
 We verified computationally that the EXPDB pipeline has fully exploited the Guth-Maynard result for $\theta_{\mathrm{PNTALL}}$; no pipeline optimization changes the binding value $30/13$. The sole identified gap (stale exponent pairs in `bourgain_ep_to_zd`) affects only the $\theta_{\mathrm{GAPSQUARE}}$ computation and has been reported to the EXPDB maintainers.
 
 ---
@@ -302,8 +297,6 @@ After the first improvement past GM, the second improvement would need to target
 ![Succession of bottlenecks as the cusp is progressively shaved, showing the peak migrating rightward through Ivic, TTY, and other constraints.](succession_bottlenecks.png)
 *Figure 4. Successive hypothetical improvements to the $A(\sigma)$ envelope. Black: current envelope. Red ($\varepsilon = 0.10$): first shave exposes Ivic (2003) at $\sigma \approx 0.76$. Orange ($\varepsilon = 0.22$): second shave exposes Ivic (1979)/TTY. Purple ($\varepsilon = 0.43$): third shave reaches Ivic (1980) at $\sigma \approx 0.80$. The bottleneck migrates rightward with each improvement.*
 
-=======
->>>>>>> 86fceaec5afc6111f7e8b77b3090ceaab78b1b61
 ---
 
 ## References

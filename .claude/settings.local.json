@@ -99,7 +99,12 @@
       "Bash(ls -d \"C:/Users/allen/GitHub/Factor Skyline/PDE Evaluations/FS_Eval_\"*)",
       "Bash(ls -la LICENSE*)",
       "Bash(FS=\"C:/Users/allen/GitHub/Factor Skyline\" __NEW_LINE_c1eae2132892d80c__ echo \"=== FS: Files modified by this session ===\" cd \"$FS\")",
-      "Bash(git diff:*)"
+      "Bash(git diff:*)",
+      "Bash(mv GuthMaynard_BindingConstraints.md EXPDB-Analysis/)",
+      "Bash(mv GuthMaynard_EXPDB_Analysis.md EXPDB-Analysis/)",
+      "Bash(mv GuthMaynard_Pipeline_Report.txt EXPDB-Analysis/)",
+      "Bash(mv A_sigma_envelope.png EXPDB-Analysis/)",
+      "Bash(mv sensitivity_heatmap.png EXPDB-Analysis/)"
     ]
   }
 }
