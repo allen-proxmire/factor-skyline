@@ -91,7 +91,15 @@
       "WebFetch(domain:arxiv.org)",
       "WebSearch",
       "WebFetch(domain:mathstodon.xyz)",
-      "WebFetch(domain:teorth.github.io)"
+      "WebFetch(domain:teorth.github.io)",
+      "Bash(find '/c/Users/allen/GitHub/Factor Skyline/compute/expdb/' -name *.py)",
+      "WebFetch(domain:www.unsw.edu.au)",
+      "Bash(find '/c/Users/allen/GitHub/Factor Skyline' -maxdepth 2 -not -path */.* -type d)",
+      "Bash(find 'C:\\\\Users\\\\allen\\\\GitHub\\\\Factor Skyline' -type f -name *)",
+      "Bash(ls -d \"C:/Users/allen/GitHub/Factor Skyline/PDE Evaluations/FS_Eval_\"*)",
+      "Bash(ls -la LICENSE*)",
+      "Bash(FS=\"C:/Users/allen/GitHub/Factor Skyline\" __NEW_LINE_c1eae2132892d80c__ echo \"=== FS: Files modified by this session ===\" cd \"$FS\")",
+      "Bash(git diff:*)"
     ]
   }
 }
