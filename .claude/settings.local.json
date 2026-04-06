@@ -104,7 +104,15 @@
       "Bash(mv GuthMaynard_EXPDB_Analysis.md EXPDB-Analysis/)",
       "Bash(mv GuthMaynard_Pipeline_Report.txt EXPDB-Analysis/)",
       "Bash(mv A_sigma_envelope.png EXPDB-Analysis/)",
-      "Bash(mv sensitivity_heatmap.png EXPDB-Analysis/)"
+      "Bash(mv sensitivity_heatmap.png EXPDB-Analysis/)",
+      "Bash(tasklist)",
+      "Bash(cmd.exe /c \"taskkill /PID 15812 /F\")",
+      "Bash(cmd.exe /c \"taskkill /PID 29504 /F\")",
+      "Bash(cmd.exe /c \"del /f \"\"C:\\\\Users\\\\allen\\\\GitHub\\\\Factor Skyline\\\\.git\\\\index.lock\"\"\")",
+      "Bash(cmd.exe /c \"wmic process where \"\"commandline like ''%%Factor Skyline%%''\"\" get processid,commandline\")",
+      "Bash(cmd.exe /c \"handle.exe \"\"Factor Skyline\"\" 2>nul || echo handle.exe not available\")",
+      "Bash(cmd.exe /c \"tasklist /FI \"\"IMAGENAME eq GitHubDesktop.exe\"\"\")",
+      "Bash(powershell -Command \"Get-Process | Where-Object { $_ProcessName -match ''git|code|github'' } | Select-Object Id, ProcessName, Path\")"
     ]
   }
 }
