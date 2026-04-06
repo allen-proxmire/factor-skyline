@@ -208,7 +208,10 @@ This would not affect $\theta_{\mathrm{PNTALL}}$ but would improve $\theta_{\mat
 
 The first two paths address the same cusp from opposite sides. Any improvement to either limb, however small, strictly decreases $\theta_{\mathrm{PNTALL}}$.
 
+<<<<<<< HEAD
 We verified computationally that the EXPDB pipeline has fully exploited the Guth-Maynard result for θ_PNTALL; no pipeline optimization changes the binding value 30/13. The sole identified gap (stale exponent pairs in bourgain_ep_to_zd) affects only the GAPSQUARE computation.
+=======
+>>>>>>> 86fceaec5afc6111f7e8b77b3090ceaab78b1b61
 ---
 
 ## References
