@@ -6,7 +6,7 @@
 
 ## EXPDB Binding Constraint Analysis (2026)
 
-**[Binding Constraints After Guth-Maynard: A Structural Analysis of the EXPDB Pipeline](PAPERS/EXPDB-Analysis/GuthMaynard_BindingConstraints.md)**
+**[Binding Constraints After Guth-Maynard: A Structural Analysis of the EXPDB Pipeline](papers/EXPDB-Analysis/GuthMaynard_BindingConstraints.md)**
 
 A computational analysis of the [Analytic Number Theory Exponent Database](https://teorth.github.io/expdb/) (EXPDB) pipeline after the Guth-Maynard (2024) large value estimate. We ran the full pipeline (482 hypotheses, scipy-based polytope backend), identified the binding constraints, and performed a complete sensitivity analysis.
 
