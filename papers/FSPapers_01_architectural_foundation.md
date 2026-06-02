@@ -206,6 +206,37 @@ More generally, for any admissible H, the product converges to a value exceeding
 | Triplet (0,2,6) | 3 | 2.8581 |
 | Quadruplet (0,2,6,8) | 4 | 4.1511 |
 
+### 4.3.1. Exact identification of the twin constant
+
+For the twin pattern H = {0, 2}, the constant C_H of Definition 4.6 can be evaluated in closed form and identified with a classical object.
+
+**Theorem 4.7a (Twin constant equals the Hardy-Littlewood singular series).** For H = {0, 2},
+
+    C_H = 2 * prod_{q>2} q(q-2)/(q-1)^2 = 2*C_2 = 1.3203236...,
+
+where C_2 = prod_{q>2} (1 - 1/(q-1)^2) = 0.6601618... is the twin prime constant. The right-hand side is exactly the Hardy-Littlewood singular series for the twin pattern.
+
+*Proof.* The offsets are h_1 = 0, h_2 = 2. The residue occupation number v_q(H) = |{0 mod q, 2 mod q}| (Definition 4.1) is:
+
+    v_2 = |{0, 0}| = 1     (since 2 = 0 mod 2),
+    v_q = |{0, 2}| = 2     for every prime q > 2 (since 2 is not 0 mod q).
+
+By Theorem 4.3 the survival factor is S_q(H) = (q - v_q)/q, so with k = 2 the per-prime factor of Definition 4.6 is
+
+    S_q(H)/(1 - 1/q)^2 = [(q - v_q)/q] * [q/(q-1)]^2 = q(q - v_q)/(q-1)^2.
+
+Hence
+
+    C_H = prod_q q(q - v_q)/(q-1)^2.
+
+Separating the q = 2 term (v_2 = 1), which contributes 2*(2-1)/(2-1)^2 = 2, from the odd primes (v_q = 2), which contribute q(q-2)/(q-1)^2, gives
+
+    C_H = 2 * prod_{q>2} q(q-2)/(q-1)^2.
+
+Finally q(q-2)/(q-1)^2 = ((q-1)^2 - 1)/(q-1)^2 = 1 - 1/(q-1)^2, so the odd-prime product is exactly C_2 and C_H = 2*C_2. Numerically C_H = 1.3203236..., matching the value 1.3203 listed for the twin pattern in Table 1. QED
+
+**Remark (sharpening of Theorem 4.7).** Theorem 4.7 establishes only the qualitative bound C_H > 1 for every admissible H. Theorem 4.7a sharpens this for the twin pattern to an exact equality: the FS coverage-protection constant is not merely greater than 1 but equals the Hardy-Littlewood singular series 2*C_2 on the nose. The leading factor 2 is the structural signature of the offset-2 collision at the prime q = 2 (where v_2 = 1 rather than 2): it is the same factor 2 that appears in the Hardy-Littlewood twin density pi_2(x) ~ 2*C_2 * x/(ln x)^2. The FS survival-factor product and the classical singular series are therefore the same object, derived from the coverage architecture on one side and from the circle method on the other. (The same computation applies verbatim to the cousin pattern H = {0, 4}, where again v_2 = 1 and v_q = 2 for q > 2, explaining why the cousin constant in Table 1 coincides with the twin constant.)
+
 ### 4.4. Template Persistence
 
 **Theorem 4.8 (Template persistence).** For every admissible k-tuple H, the number of constellation-open positions in the p_k#-template, denoted N_H(p_k), satisfies:
