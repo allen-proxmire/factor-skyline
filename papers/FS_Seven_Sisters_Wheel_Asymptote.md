@@ -141,7 +141,7 @@ for lo, hi in [(10**3,3*10**3),(10**6,3*10**6),(10**7,3*10**7)]:
 
 ## References
 
-- A. Proxmire, *The Seven Sisters: Prime Generation based on the Form $2p + k$* (companion note; current source: https://github.com/allen-proxmire/seven-sisters).
+- A. Proxmire, *The Seven Sisters: Prime Generation based on the Form $2p + k$* (companion note, this repository: `papers/FS_Seven_Sisters_2p_plus_k.pdf`; data & code: https://github.com/allen-proxmire/seven-sisters).
 - A. Proxmire, *The 2p Bracket Construction* (companion note, this repository).
 - A. Proxmire, *Consecutive-Prime Sums in Prime Gaps* (companion paper, this repository) — the wide-gap-existence wall.
 - A. M. Odlyzko, M. Rubinstein, M. Wolf, *Jumping champions*, Experimental Math. 8 (1999) — primorial gaps and the wheel.

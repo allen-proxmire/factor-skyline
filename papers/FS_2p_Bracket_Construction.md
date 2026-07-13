@@ -138,6 +138,6 @@ def centered(s, B):
 
 ## References
 
-- A. Proxmire, *The Seven Sisters: Prime Generation based on the Form $2p + k$* (companion note, to be added to this repository; current source: https://github.com/allen-proxmire/seven-sisters).
+- A. Proxmire, *The Seven Sisters: Prime Generation based on the Form $2p + k$* (companion note, this repository: `papers/FS_Seven_Sisters_2p_plus_k.pdf`; data & code: https://github.com/allen-proxmire/seven-sisters).
 - A. Proxmire, *Consecutive-Prime Sums in Prime Gaps* (companion paper, this repository).
 - OEIS A001043, *Numbers that are the sum of two successive primes*.

@@ -94,6 +94,6 @@ Two operations, two geometric objects. Doubling sets the stage; the wheel decide
 - *Consecutive-Prime Sums in Prime Gaps* — density law, forbidden-width theorem (this repository).
 - *The 2p Bracket Construction* — signature, mirror law, centering, doubling ladders (this repository).
 - *Extending the Seven Sisters: the Wheel and the 100% Asymptote* (this repository).
-- *The Seven Sisters: Prime Generation based on the Form $2p+k$* (companion note; source: https://github.com/allen-proxmire/seven-sisters).
+- *The Seven Sisters: Prime Generation based on the Form $2p+k$* (companion note, this repository: `papers/FS_Seven_Sisters_2p_plus_k.pdf`; data & code: https://github.com/allen-proxmire/seven-sisters).
 - Odlyzko, Rubinstein, Wolf, *Jumping champions*, Experimental Math. 8 (1999).
 - Figures: `graphics/FS_master_synthesis.png`, `FS_wheel_fan.png`, `FS_seven_sisters_escape.png`, `FS_consec_prime_arithmetic.png`.
