@@ -61,7 +61,7 @@ $$60 = 29+31 \to (+1, +3, -3, -1), \qquad 120 = 59+61 \to (-5, +9, -9, +5).$$
 
 When centered, writing $t = d_L = d_U = W/2$, (2.1) collapses to
 $$(a, b, c, d) = \big(g - t,\ g + t,\ -(g+t),\ -(g-t)\big) = (-x, +y, -y, +x), \quad x = t - g,\ y = t + g. \tag{3.1}$$
-For $120$: $t = 7,\ g = 2 \Rightarrow (x, y) = (5, 9) \Rightarrow (-5, +9, -9, +5)$. ✓
+For $120$: $t = 7,\ g = 2 \Rightarrow (x, y) = (5, 9) \Rightarrow (-5, +9, -9, +5)$, as claimed.
 
 ### 3.1. Why "multiples of 12" was the wrong trigger
 
