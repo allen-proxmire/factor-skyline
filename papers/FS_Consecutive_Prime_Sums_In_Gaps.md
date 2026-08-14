@@ -120,7 +120,7 @@ The tight case $S_{k+1} - S_k = 6$ has rigid arithmetic.
 
 In both cases the sums are $\equiv 0 \pmod 3$, and being even they are $\equiv 0 \pmod 6$. $\square$
 
-So a tight double consists of **two multiples of $6$, six apart.** Whether a given width can accommodate this reduces to counting the multiples of $6$ interior to the gap — and that count is forced by $W \bmod 3$, because the gap's lower endpoint has a forced residue.
+So a tight double consists of **two multiples of $6$, six apart.** (The complementary question — which multiples of $6$ are *never* consecutive-prime sums at all — is catalogued as OEIS A323138; here we instead count the multiples of $6$ a gap can *hold*.) Whether a given width can accommodate this reduces to counting the multiples of $6$ interior to the gap — and that count is forced by $W \bmod 3$, because the gap's lower endpoint has a forced residue.
 
 **Lemma 4.2 (Endpoint residue).** Let $(a, a+W)$ be a prime gap with $a > 3$.
 - If $W \equiv 1 \pmod 3$ then $a \equiv 1 \pmod 6$.
@@ -295,6 +295,7 @@ Expected output (abridged): forbidden widths `[2, 4, 6, 10]`; mean $\approx 0.56
 ## References
 
 - OEIS A001043, *Numbers that are the sum of two successive primes*.
+- OEIS A323138, *Multiples of 6 that are not the sum of two consecutive primes* (the complementary "missed values" question; see §4.2).
 - Bertrand's postulate / Chebyshev's theorem.
 - H. Cramér, *On the order of magnitude of the difference between consecutive prime numbers*, Acta Arith. 2 (1936).
 - G. H. Hardy and J. E. Littlewood, *Some problems of 'Partitio numerorum' III*, Acta Math. 44 (1923) — the prime $k$-tuple conjecture.
